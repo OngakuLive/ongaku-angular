@@ -17,9 +17,10 @@
       "test": "test.ts",
       "tsconfig": "tsconfig.app.json",
       "testTsconfig": "tsconfig.spec.json",
-      "prefix": "app",
+      "prefix": "",
       "styles": [
-        "styles.css"
+        "styles.css",
+        "assets/styles/app.less"
       ],
       "scripts": [],
       "environmentSource": "environments/environment.ts",
@@ -58,6 +59,12 @@
     "class": {
       "spec": false
     },
-    "component": {}
+    "component": {
+      "inlineStyle": true,
+      "spec": false
+    },
+    "module": {
+      "spec": false
+    }
   }
 }
