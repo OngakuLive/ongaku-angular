@@ -1,12 +1,14 @@
 import { NgModule } from '@angular/core';
 import { UiModule } from '../ui/ui.module';
 import { HomeComponent } from './home.component';
+import {PreRegisterComponent} from './pre-register.component';
 
 const MODULES = [
 ];
 
 const COMPONENTS = [
-  HomeComponent
+  HomeComponent,
+  PreRegisterComponent
 ];
 
 @NgModule({

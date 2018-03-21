@@ -1,7 +1,59 @@
-body {
-  background: #000000;
-}
-
 * {
-  color: #ffffff;
+  box-sizing:      border-box;
+  position:        relative;
+  margin:          0;
+  padding:         0;
+  font-family:     Roboto, sans-serif;
+  font-weight:     400;
+  font-size:       12px;
+  text-decoration: none;
+  color:           #495057;
+  cursor:          default;
+  outline:         none;
+}
+a:hover, button:hover {
+  cursor: pointer;
+}
+a:not(.button):hover {
+  color: #329AF0;
+}
+h1, h2, h3, h4, h5, h6, li, th, td, p, a, button, span {
+  user-select: none;
+}
+html, body {
+  height: 100%;
+}
+h1, h2, h3 {
+  font-weight: 500;
+  color:       #212529;
+}
+h4, h5, h6 {
+  font-weight: 300;
+  color:       #343A40;
+}
+h1 {
+  font-size: 32px;
+}
+h2 {
+  font-size: 24px;
+}
+h3 {
+  font-size: 20px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+hr {
+  margin:        20px 0;
+  border:        none;
+  border-bottom: solid 1px #E9ECEF;
+}
+.fa {
+  color:inherit;
 }
