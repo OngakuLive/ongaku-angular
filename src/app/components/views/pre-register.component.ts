@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import {HttpService} from '../../services/http.service';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'pre-register',
@@ -32,7 +33,7 @@ export class PreRegisterComponent implements OnInit {
   public hasPreregistered = false;
   public preregistration: FormGroup;
   public submitAttempted = false;
-  constructor(private http: HttpService) { }
+  constructor(private http: HttpService, private router: Router) { }
 
   ngOnInit() {
     this.preregistration = new FormGroup({
@@ -45,7 +46,22 @@ export class PreRegisterComponent implements OnInit {
   onSubmit() {
     this.submitAttempted = true;
     if (this.preregistration.valid) {
-      this.hasPreregistered = true;
+      this.http.POST('/auth/pre-register',
+        this.preregistration.getRawValue(), true, false).subscribe(
+          res => {
+            this.hasPreregistered = true;
+            console.warn('success');
+          },
+          err => {
+            // todo: error service
+            console.warn(err);
+          },
+        () => {
+            console.warn('after');
+          }
+      );
+    } else {
+      console.warn('invalid');
     }
   }
 }
