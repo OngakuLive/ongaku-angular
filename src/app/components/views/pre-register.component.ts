@@ -6,16 +6,11 @@ import {Router} from '@angular/router';
 
 @Component({
   selector: 'pre-register',
-  template: `
-    <div class="flex flex-column flex-full">
-      <h3>ongaku</h3>
-      <form *ngIf="!hasPreregistered" 
-            (submit)="onSubmit()" 
-            [formGroup]="preregistration" 
-            class="flex flex-column">
-        <input formControlName="name" placeholder="name" />
-        <input formControlName="email" placeholder="email" />
-        <input formControlName="username" placeholder="username" />
+  template: `<div class="flex flex-column flex-full"><h3>ongaku</h3>
+      <form *ngIf="!hasPreregistered"  (submit)="onSubmit()" [formGroup]="preregistration" class="flex flex-column">
+        <input formControlName="name" placeholder="name"/> 
+        <input formControlName="email" placeholder="email"/> 
+        <input formControlName="username" placeholder="username"/>
         <button class="btn">pre-register</button>
       </form>
       <div *ngIf="hasPreregistered">
@@ -25,8 +20,7 @@ import {Router} from '@angular/router';
            style="position: absolute;right:0;bottom:0; margin: 10px;">
         <p>invalid data</p>
       </div>
-    </div>
-  `,
+    </div>    `,
   styles: []
 })
 export class PreRegisterComponent implements OnInit {
