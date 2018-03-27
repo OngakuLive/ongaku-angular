@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { ViewsModule } from './views/views.module';
 import {HttpService} from '../services/http.service';
+import {AuthenticatedGuard} from '../guards/authenticated.guard';
 
 const MODULES = [
   ViewsModule
@@ -8,6 +9,7 @@ const MODULES = [
 
 const PROVIDERS = [
   HttpService,
+  AuthenticatedGuard
 ];
 
 const COMPONENTS = [];

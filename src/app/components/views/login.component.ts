@@ -10,7 +10,7 @@ import {AuthService} from '../../services/auth.service';
   template: `
     <div class="flex flex-row flex-full flex-right" 
          style="background-size:cover;background-image:url('/assets/images/loginbackground-dark.png')">
-      <div class="flex flex-column" style="height: 100%;background: linear-gradient(to right, transparent , black);">
+      <div class="flex flex-column" #test style="height: 100%;background: linear-gradient(to right, transparent , black);">
         <h3>ONGAKU</h3>
         <form (submit)="onSubmit()" [formGroup]="loginForm" class="flex flex-column">
           <input formControlName="login" placeholder="login" />
@@ -23,7 +23,13 @@ import {AuthService} from '../../services/auth.service';
         </form>
       </div>
     </div>`,
-  styles: []
+  styles: [`
+    @media (min-width: 772px) {
+      .flex-column {
+        width: 40vw !important;
+      }
+    }
+  `]
 })
 export class LoginComponent implements OnInit {
   @ViewChild('passwordField') passwordField: any;

@@ -5,6 +5,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule }                     from '@angular/router';
 
 import { ClickOutsideModule } from 'ng-click-outside';
+import {NavbarComponent} from './navbar/navbar.component';
 
 const MODULES = [
   BrowserModule,
@@ -16,6 +17,7 @@ const MODULES = [
   ClickOutsideModule
 ];
 const COMPONENTS = [
+  NavbarComponent
 ];
 
 @NgModule({

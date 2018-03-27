@@ -8,6 +8,7 @@ import { JwtModule } from '@auth0/angular-jwt';
 import { AuthConfig, AuthHttp } from 'angular2-jwt';
 import { CommonModule } from '@angular/common';
 import {AuthService} from './services/auth.service';
+import {AuthenticatedGuard} from './guards/authenticated.guard';
 
 export function tokenGetter() {
   return localStorage.getItem('token');
