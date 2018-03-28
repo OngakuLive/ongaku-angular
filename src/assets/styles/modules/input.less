@@ -6,4 +6,10 @@ input {
   color: @light;
   width: @control-width;
   height: @control-height;
+
+  &.search {
+    input::after {
+      content: 'search'
+    }
+  }
 }

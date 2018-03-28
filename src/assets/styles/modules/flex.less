@@ -13,11 +13,15 @@
   &.flex-row {
 
     &.flex-top {
-      align-items: flex-start;
+      justify-content: flex-start;
     }
 
     &.flex-right {
       justify-content: flex-end;
+    }
+
+    &.flex-even {
+      justify-content: space-between;
     }
 
     > * {
@@ -39,7 +43,7 @@
     }
 
     &.flex-left {
-      align-items: flex-start;
+      justify-content: flex-start;
     }
 
     &.flex-right {
@@ -70,4 +74,12 @@
       margin-left: auto;
     }
   }
+}
+
+.flex-self-start {
+  align-self: flex-start;
+}
+
+.flex-self-end {
+  align-self: flex-end;
 }

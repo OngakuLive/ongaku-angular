@@ -20,7 +20,8 @@
       "prefix": "",
       "styles": [
         "styles.css",
-        "assets/styles/app.less"
+        "assets/styles/app.less",
+        "../node_modules/font-awesome/css/font-awesome.css"
       ],
       "scripts": [],
       "environmentSource": "environments/environment.ts",
