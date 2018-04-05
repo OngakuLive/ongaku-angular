@@ -1,6 +1,7 @@
 .flex {
   display:         flex !important;
   flex-direction:  row;
+  flex-wrap:       wrap;
   justify-content: center;
   justify-items:   center;
   align-items:     center;
@@ -11,7 +12,8 @@
   }
 
   &.flex-row {
-
+    flex-wrap: nowrap;
+    
     &.flex-top {
       justify-content: flex-start;
     }
@@ -25,6 +27,8 @@
     }
 
     > * {
+      margin: 0 10px;
+      
       &:first-child {
         margin-left: 0;
       }
