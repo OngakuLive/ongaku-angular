@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { Http, HttpModule, RequestOptions } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
 import { JwtModule } from '@auth0/angular-jwt';
-import { AuthConfig, AuthHttp } from 'angular2-jwt';
+import {AuthConfig, AuthHttp, JwtHelper} from 'angular2-jwt';
 import { CommonModule } from '@angular/common';
 import {AuthService} from './services/auth.service';
 import {AuthenticatedGuard} from './guards/authenticated.guard';
@@ -34,7 +34,8 @@ export function authHttpServiceFactory(http: Http, options: RequestOptions) {
       useFactory: authHttpServiceFactory,
       deps: [Http, RequestOptions]
     },
-    AuthService
+    AuthService,
+    JwtHelper
   ],
   declarations: [AppComponent],
   bootstrap: [AppComponent]

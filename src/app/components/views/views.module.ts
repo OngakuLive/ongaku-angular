@@ -14,7 +14,7 @@ const COMPONENTS = [
   HomeComponent,
   PreRegisterComponent,
   LoginComponent,
-  FeedComponent
+  FeedComponent,
 ];
 
 @NgModule({

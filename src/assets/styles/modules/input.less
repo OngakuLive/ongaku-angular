@@ -1,9 +1,7 @@
 input {
-  border-radius: 4px;
-  border: 1px solid @light;
-  background-color: transparent;
+  border-radius: @control-border-radius;
+
   padding: 10px 20px;
-  color: @light;
   width: @control-width;
   height: @control-height;
 
@@ -11,5 +9,55 @@ input {
     input::after {
       content: 'search'
     }
+  }
+
+  //spotlight style background
+  border: 1px solid @spotlight-background;
+  background-color: @spotlight-background;
+  color: @spotlight-text;
+  &:hover {
+    background-color: rgba(30,30,30,1);
+  }
+
+  //Always heavy border
+  //border: 1px solid @light;
+  //color: @light;
+  //background-color: transparent;
+
+
+  //Light border with heavier on hover.
+  //border: 1px solid rgba(100,100,100,1);
+  //background-color: transparent;
+  //color: @light;
+  //&:hover {
+  //  border: 1px solid @light;
+  //}
+
+  &:-webkit-autofill {
+      //transition: background-color 5000s ease-in-out 0s;
+    -webkit-box-shadow: inset 0 0 0px 1000px @spotlight-background;
+    -webkit-text-fill-color: @light;
+    border:none !important;
+    outline: none !important;
+
+    &:hover {
+      -webkit-box-shadow: inset 0 0 0px 1000px rgba(30,30,30,1);
+    }
+  }
+}
+
+.input {
+  border-radius: @control-border-radius;
+  border: 1px solid @spotlight-background;
+  background-color: @spotlight-background;
+  color: @spotlight-text;
+  &:hover {
+    background-color: rgba(30,30,30,1);
+  }
+}
+
+@media (max-width: @control-width) {
+  input {
+    width: 100%;
   }
 }

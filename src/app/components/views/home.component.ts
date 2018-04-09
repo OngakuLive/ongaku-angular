@@ -3,9 +3,8 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'home',
   template: `
-      <div class="flex flex-column flex-full">
-          <h4>home works</h4>
-      </div>
+      <nav-bar></nav-bar>
+      <router-outlet></router-outlet>
   `,
   styles: []
 })

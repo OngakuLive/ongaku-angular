@@ -6,6 +6,7 @@ import { RouterModule }                     from '@angular/router';
 
 import { ClickOutsideModule } from 'ng-click-outside';
 import {NavbarComponent} from './navbar/navbar.component';
+import {ProfileCardComponent} from './feed/profile-card.component';
 
 const MODULES = [
   BrowserModule,
@@ -17,7 +18,8 @@ const MODULES = [
   ClickOutsideModule
 ];
 const COMPONENTS = [
-  NavbarComponent
+  NavbarComponent,
+  ProfileCardComponent
 ];
 
 @NgModule({
